@@ -16,8 +16,10 @@ with st.spinner('Инициализация нейронной сети...'):
     from PIL import Image
     import cv2
     import gdown
+    import os
     
-    gdown.download("https://drive.google.com/file/d/1ifKeWqsp16X4S14JYjKB3tPELviBq3Zv/view?usp=share_link", "swan_best_1.pt", quiet=False)
+    if not os.path.exists("./swan_best_1"):
+        gdown.download("https://drive.google.com/file/d/1ifKeWqsp16X4S14JYjKB3tPELviBq3Zv/view?usp=share_link", "./swan_best_1.pt", quiet=False)
     
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
