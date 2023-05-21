@@ -1,5 +1,6 @@
 torch
 numpy
-opencv-python
+opencv-python-headless
 ultralytics
 Pillow
+gdown
